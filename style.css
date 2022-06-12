@@ -1,0 +1,91 @@
+body {
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+}
+
+body{
+	font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+ }
+
+ section{
+	padding-top: 5rem;
+ }
+ .jumbotron{
+     padding-top: 2rem ;
+     padding-left: 16rem;
+     padding-right: 3rem;
+     padding-bottom: 4rem;
+ }
+
+ .menu{
+     padding-left: 20rem;
+ }
+ .wrapper{
+	 width: 100%;
+	 height: 100%;
+ }
+ .navbar{
+	 margin-bottom: 0;
+ }
+
+ .sidebar {
+     width: 100%;
+     height: 100%;
+     background: 	#0f77df;
+     position: fixed;
+     z-index: 100;
+     padding-top: 2px;
+     padding-left: 2rem;
+ }
+
+
+ ul{
+	 padding: 0;
+	 margin-left: -70px;
+ }
+ ul li{
+	 list-style: none;
+	 border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+ }
+ ul li a{
+	 text-decoration: none;
+	 color: 	#e6f512;
+	 display: block;
+	 padding: 19px 0px 18px 25px;
+	 transition: all 200ms ease-in;
+ }
+ ul li a:hover{
+	 text-decoration: none;
+	 color: #0be63b;
+ }
+ ul li a:visited{
+	 text-decoration: none;
+	 color: rgb(248, 7, 7);
+ }
+ li li a span{
+	 display: inline-block;
+ }
+ ul ul{
+	 display: none;
+	 margin:0px;
+ }
+ ul li a .fa-angle-down{
+	 margin-right: 10px;
+ }
+
+ .container{
+	 margin-left: 20%;
+ }
+
+
+ /*apabila lebar min 768px*/
+ @media(min-width: 768px) {
+	 .sidebar{
+		 width: 240px;
+	 }
+	 .content{
+		 margin-left: 250px;
+	 }
+	 .inner{
+		 padding: 15px;
+	 }
+ }

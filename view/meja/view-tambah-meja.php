@@ -1,0 +1,64 @@
+<?php
+require('../../functions.php');
+session_start();
+if (!isset($_SESSION["id_pegawai"])) {
+    header("Location: ../../index.php?error=4");
+}
+
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <?php nav("Tambah Pesanan"); ?>
+</head>
+
+<body>
+    <form method="post" action="./crud/tambah-meja.php">
+        <h1 align="center">Tambah Meja</h1>
+        <table align="center" class="table-sm">
+            <tr>
+                <td width="25%">No Meja</td>
+                <td width="25%"><input type="text" id="no_meja" name="no_meja" class="form-control" required></td>
+            </tr>
+            <tr>
+                <td width="25%">Status Meja</td>
+                <td width="25%">
+                    <select class="form-select" id="status_pesanan" name="status">
+                        <option value="">Pilih Kondisi</option>
+                        <option value="tersedia">Tersedia</option>
+                        <option value="tidak tersedia">Tidak Tersedia</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+            
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="reset" value="Reset" class="btn btn-danger">
+                    <input type="submit" value="Submit" class="btn btn-success" name="btnSubmit" onclick='Alert'>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function add() {
+        total = 0;
+        subTotal = 0;
+        sum = document.getElementsByClassName("qty_sementara");
+        harga = document.getElementsByClassName("subtotal_sementara");
+        for (a = 0; a < sum.length; a++) {
+            console.log(sum[a].value);
+            console.log(harga[a].value);
+            total += parseInt(sum[a].value || 0);
+            subTotal += parseInt(sum[a].value || 0) * parseInt(harga[a].value || 0);
+        }
+        document.getElementById("jumlah_pemesanan").value = total;
+        document.getElementById("subTotal").value = subTotal;
+    }
+</script>
+
+</html>
